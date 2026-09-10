@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALA JI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 450px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('https://images.unsplash.com/photo-1540747737956-378724044432?q=80&w=1000&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .main-title {
+            color: #ffcc00;
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .sub-title {
+            color: #ffcc00;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .profile-wrapper {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #1e88e5;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+            background-color: #222;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timer-text {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .timer-highlight {
+            color: #ffcc00;
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin: 0 3px;
+        }
+
+        .accuracy-badge {
+            background-color: #1a1c23;
+            border: 1px solid #3f4451;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .accuracy-top {
+            color: #ff3333;
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+
+        .accuracy-label {
+            color: #b0b5c1;
+        }
+
+        .cta-tip {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .telegram-btn {
+            width: 100%;
+            background-color: #00f0ff;
+            color: #ff0000;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+            transition: transform 0.2s ease;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .telegram-btn:active {
+            transform: scale(0.98);
+        }
+
+        .tg-icon {
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .footer-coin {
+            color: #ffcc00;
+        }
+
+        .footer-tagline {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        
+        <!-- मुख्य नाम -->
+        <h1 class="main-title">BALA JI</h1>
+        <h2 class="sub-title">CRICKET</h2>
+
+        <!-- बीच में आपकी भेजी गई फ़ोटो -->
+        <div class="profile-wrapper">
+            <!-- यहाँ आपकी छवि/फ़ोटो को बेस64 या लाइव यूआरएल से बदल सकते हैं, अभी के लिए प्लेसहोल्डर दिया है -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop" alt="BALA JI Profile" class="profile-img" id="profileImage">
+        </div>
+
+        <!-- टाइमर काउंटर -->
+        <div class="timer-text">
+            Join Now <span class="timer-highlight" id="countdown">21</span> Seconds Left
+        </div>
+
+        <!-- एक्यूरेसी बैज -->
+        <div class="accuracy-badge">
+            <span class="accuracy-top">Top</span>
+            <span class="accuracy-label">Accuracy</span>
+        </div>
+
+        <!-- आगामी टिप कॉल टू एक्शन -->
+        <div class="cta-tip">
+            Join and Watch Upcoming Tip 👆
+        </div>
+
+        <!-- टेलीग्राम चैनल लिंक बटन -->
+        <a href="https://t.me/+upHfffX6lDpjM2Fl" class="telegram-btn">
+            <span class="tg-icon">🚀</span>
+            JOIN BALA JI CRICKET TELEGRAM CHANNEL
+        </a>
+
+        <!-- फूटर डिटेल्स -->
+        <div class="footer-brand">
+            <span class="footer-coin">💰</span> BALA JI CRICKET
+        </div>
+        <div class="footer-tagline">
+            CRICKET TIPPING KI DUNIA KA RAJA 👑
+        </div>
+
+    </div>
+
+    <script>
+        // 21 सेकंड का उल्टी गिनती (Countdown) टाइमर लूप
+        const countdownElement = document.getElementById('countdown');
+        let timeLeft = 21;
+
+        setInterval(() => {
+            timeLeft--;
+            if (timeLeft < 0) {
+                timeLeft = 21; // दोबारा 21 से शुरू करने के लिए
+            }
+            countdownElement.textContent = timeLeft;
+        }, 1000);
+    </script>
+</body>
+</html>
